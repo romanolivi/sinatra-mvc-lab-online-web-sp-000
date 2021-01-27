@@ -9,11 +9,11 @@ class PigLatinizer
     alphabet = ('a'..'z').to_a + ('A'..'Z').to_a
     vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     consonant = alphabet - vowel
-                                                            school    ool + 
+    
     if vowel.include?(word[0])
       word = word + "way"
     elsif consonant.include?(word[0]) && consonant.include?(word[1]) && consonant.include?(word[2])
-      word = word.slice(3..-1) + word.slice(0,3) + "ay"
+      word = word.slice(3..-1) + word.slice(0,2) + "ay"
     elsif consonant.include?(word[0]) && consonant.include?(word[1])
       word = word.slice(2..-1) + word.slice(0,2) + "ay"
     elsif consonant.include?(word[0])
