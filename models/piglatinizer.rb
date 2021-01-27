@@ -13,11 +13,11 @@ class PigLatinizer
     if vowel.include?(word[0])
       word = word + "way"
     elsif consonant.include?(word[0]) && consonant.include?(word[1]) && consonant.include?(word[2])
-      word = word.slice(3..-1) + word.slice(0,3) << "ay"
+      word = word.slice(3..-1) + word.slice(0,3) + "ay"
     elsif consonant.include?(word[0]) && consonant.include?(word[1])
-      word = word.slice(2..-1) + word.slice(0,2) << "ay"
+      word = word.slice(2..-1) + word.slice(0,2) + "ay"
     elsif consonant.include?(word[0])
-      word = word.slice(1..-1) + word.slice(0,1) << "ay"
+      word = word.slice(1..-1) + word.slice(0,1) + "ay"
     end
     word
   end
