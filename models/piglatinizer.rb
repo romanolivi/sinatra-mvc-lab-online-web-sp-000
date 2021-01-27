@@ -9,7 +9,7 @@ class PigLatinizer
     alphabet = ('a'..'z').to_a + ('A'..'Z').to_a
     vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     consonant = alphabet - vowel
-    
+                                                            school    ool + 
     if vowel.include?(word[0])
       word = word + "way"
     elsif consonant.include?(word[0]) && consonant.include?(word[1]) && consonant.include?(word[2])
